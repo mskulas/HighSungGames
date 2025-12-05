@@ -1,4 +1,5 @@
 import java.util.Random;
+import java.util.concurrent.atomic.AtomicInteger;
 
 /**
  * Thief character thread - races to reach a score of 1000.
@@ -19,68 +20,71 @@ public class Thief extends Thread {
 
                 switch (roll) {
                     case 1:
-                        // placeholder
+                        tScore -= 140;
+                        if (tScore < 0) tScore = 0;
                         break;
                     case 2:
-                        // placeholder
+                        tScore -= 100;
+                        if (tScore < 0) tScore = 0;
                         break;
                     case 3:
-                        // placeholder
+                        tScore -= 50;
+                        if (tScore < 0) tScore = 0;
                         break;
                     case 4:
-                        // placeholder
+                        tScore -= 10;
+                        if (tScore < 0) tScore = 0;
                         break;
                     case 5:
-                        // placeholder
+                        // no score change
                         break;
                     case 6:
-                        // placeholder
+                        // no score change
                         break;
                     case 7:
-                        // placeholder
+                        // no score change
                         break;
                     case 8:
-                        // placeholder
+                        // no score change
                         break;
                     case 9:
-                        // placeholder
+                        // no score change
                         break;
                     case 10:
-                        // placeholder
+                        // no score change
                         break;
                     case 11:
-                        // placeholder
+                        tScore += 10;
                         break;
                     case 12:
-                        // placeholder
+                        tScore += 25;
                         break;
                     case 13:
-                        // placeholder
+                        tScore += 40;
                         break;
                     case 14:
-                        // placeholder
+                        tScore += 85;
                         break;
                     case 15:
-                        // placeholder
+                        tScore += 125;
                         break;
                     case 16:
-                        // placeholder
+                        tScore += 200;
                         break;
                     case 17:
-                        // placeholder
+                        tScore += 250;
                         break;
                     case 18:
-                        // placeholder
+                        tScore += 315;
                         break;
                     case 19:
-                        // placeholder
+                        tScore += 400;
                         break;
                     case 20:
-                        // placeholder
+                        tScore += 600;
                         break;
                 }
-
-                tScore += roll;
+                
                 System.out.println("The Thief's score: " + tScore);
                 if (tScore >= 1000) {
                     if (!GameState.gameOver) {

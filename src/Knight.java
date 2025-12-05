@@ -19,67 +19,72 @@ public class Knight extends Thread {
 
                 switch (roll) {
                     case 1:
-                        // placeholder
+                        kScore -= 200;
+                        if (kScore < 0) kScore = 0;
                         break;
                     case 2:
-                        // placeholder
+                        kScore -= 125;
+                        if (kScore < 0) kScore = 0;
                         break;
                     case 3:
-                        // placeholder
+                        kScore -= 85;
+                        if (kScore < 0) kScore = 0;
                         break;
                     case 4:
-                        // placeholder
+                        kScore -= 60;
+                        if (kScore < 0) kScore = 0;
                         break;
                     case 5:
-                        // placeholder
+                        kScore -= 10;
+                        if (kScore < 0) kScore = 0;
                         break;
                     case 6:
-                        // placeholder
+                        // no score change
                         break;
                     case 7:
-                        // placeholder
+                        // no score change
                         break;
                     case 8:
-                        // placeholder
+                        // no score change
                         break;
                     case 9:
-                        // placeholder
+                        // no score change
                         break;
                     case 10:
-                        // placeholder
+                        kScore += 10;
                         break;
                     case 11:
-                        // placeholder
+                        kScore += 15;
                         break;
                     case 12:
-                        // placeholder
+                        kScore += 50;
                         break;
                     case 13:
-                        // placeholder
+                        kScore += 75;
                         break;
                     case 14:
-                        // placeholder
+                        kScore += 100;
                         break;
                     case 15:
-                        // placeholder
+                        kScore += 150;
                         break;
                     case 16:
-                        // placeholder
+                        kScore += 215;
                         break;
                     case 17:
-                        // placeholder
+                        kScore += 275;
                         break;
                     case 18:
-                        // placeholder
+                        kScore += 325;
                         break;
                     case 19:
-                        // placeholder
+                        kScore += 450;
                         break;
                     case 20:
-                        // placeholder
+                        kScore += 800;
                         break;
                 }
-                kScore += roll;
+                
                 System.out.println("The Knight's score: " + kScore);
                 // if we reached the goal, set the global flag and break
                 if (kScore >= 1000) {

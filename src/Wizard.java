@@ -19,68 +19,73 @@ public class Wizard extends Thread {
 
                 switch (roll) {
                     case 1:
-                        // placeholder
+                        wScore -= 350;
+                        if (wScore < 0) wScore = 0;
                         break;
                     case 2:
-                        // placeholder
+                        wScore -= 200;
+                        if (wScore < 0) wScore = 0;
                         break;
                     case 3:
-                        // placeholder
+                        wScore -= 125;
+                        if (wScore < 0) wScore = 0;
                         break;
                     case 4:
-                        // placeholder
+                        wScore -= 100;
+                        if (wScore < 0) wScore = 0;
                         break;
                     case 5:
-                        // placeholder
+                        wScore -= 45;
+                        if (wScore < 0) wScore = 0;
                         break;
                     case 6:
-                        // placeholder
+                        wScore -= 10;
+                        if (wScore < 0) wScore = 0;
                         break;
                     case 7:
-                        // placeholder
+                        // no score change
                         break;
                     case 8:
-                        // placeholder
+                        // no score change
                         break;
                     case 9:
-                        // placeholder
+                        wScore += 10;
                         break;
                     case 10:
-                        // placeholder
+                        wScore += 25;
                         break;
                     case 11:
-                        // placeholder
+                        wScore += 45;
                         break;
                     case 12:
-                        // placeholder
+                        wScore += 85;
                         break;
                     case 13:
-                        // placeholder
+                        wScore += 100;
                         break;
                     case 14:
-                        // placeholder
+                        wScore += 120;
                         break;
                     case 15:
-                        // placeholder
+                        wScore += 185;
                         break;
                     case 16:
-                        // placeholder
+                        wScore += 230;
                         break;
                     case 17:
-                        // placeholder
+                        wScore += 300;
                         break;
                     case 18:
-                        // placeholder
+                        wScore += 375;
                         break;
                     case 19:
-                        // placeholder
+                        wScore += 500;
                         break;
                     case 20:
-                        // placeholder
+                        wScore += 999;
                         break;
                 }
 
-                wScore += roll;
                 System.out.println("The Wizard's score: " + wScore);
                 if (wScore >= 1000) {
                     if (!GameState.gameOver) {
