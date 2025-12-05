@@ -19,6 +19,7 @@ public class Knight extends Thread {
 
                 switch (roll) {
                     case 1:
+                        System.out.println("The Knight runs and cowers from " + LowLevelMonster.get() + "!");
                         kScore -= 200;
                         if (kScore < 0) kScore = 0;
                         break;
@@ -84,7 +85,7 @@ public class Knight extends Thread {
                         kScore += 800;
                         break;
                 }
-                
+
                 System.out.println("The Knight's score: " + kScore);
                 // if we reached the goal, set the global flag and break
                 if (kScore >= 1000) {

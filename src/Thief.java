@@ -1,5 +1,4 @@
 import java.util.Random;
-import java.util.concurrent.atomic.AtomicInteger;
 
 /**
  * Thief character thread - races to reach a score of 1000.
@@ -84,7 +83,7 @@ public class Thief extends Thread {
                         tScore += 600;
                         break;
                 }
-                
+
                 System.out.println("The Thief's score: " + tScore);
                 if (tScore >= 1000) {
                     if (!GameState.gameOver) {
