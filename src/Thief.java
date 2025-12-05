@@ -19,67 +19,81 @@ public class Thief extends Thread {
 
                 switch (roll) {
                     case 1:
+                        System.out.println("The Thief is ambushed by " + LowLevelMonster.get() + "! -140 points!");
                         tScore -= 140;
                         if (tScore < 0) tScore = 0;
                         break;
                     case 2:
+                        System.out.println("The Thief trips " + Traps.get() + "! -100 points!");
                         tScore -= 100;
                         if (tScore < 0) tScore = 0;
                         break;
                     case 3:
+                        System.out.println("The Thief is spotted by " + MidLevelMonster.get() + "! -50 points!");
                         tScore -= 50;
                         if (tScore < 0) tScore = 0;
                         break;
                     case 4:
+                        System.out.println("The Thief loudly fumbles her lockpicks! -10 points!");
                         tScore -= 10;
                         if (tScore < 0) tScore = 0;
                         break;
                     case 5:
-                        // no score change
+                        System.out.println("The Thief sneaks around unnoticed.");
                         break;
                     case 6:
-                        // no score change
+                        System.out.println("The Thief blends into the shadows.");
                         break;
                     case 7:
-                        // no score change
+                        System.out.println("The Thief listens carefully for prying enemies.");
                         break;
                     case 8:
-                        // no score change
+                        System.out.println("The Thief checks for traps ahead.");
                         break;
                     case 9:
-                        // no score change
+                        System.out.println("The Thief scouts the area.");
                         break;
                     case 10:
-                        // no score change
+                        System.out.println("The Thief messes with her dagger.");
                         break;
                     case 11:
+                        System.out.println("The Thief does a cool dagger trick! +10 points!");
                         tScore += 10;
                         break;
                     case 12:
+                        System.out.println("The Thief avoids " + Traps.get() + "! +25 points!");
                         tScore += 25;
                         break;
                     case 13:
+                        System.out.println("The Thief disarms " + Traps.get() + "! +40 points!");
                         tScore += 40;
                         break;
                     case 14:
+                        System.out.println("The Thief finds " + LowLevelTreasure.get() + "! +85 points!");
                         tScore += 85;
                         break;
                     case 15:
+                        System.out.println("The Thief backstabs " + LowLevelMonster.get() + "! +125 points!");
                         tScore += 125;
                         break;
                     case 16:
+                        System.out.println("The Thief uncovers " + MidLevelTreasure.get() + "! +200 points!");
                         tScore += 200;
                         break;
                     case 17:
+                        System.out.println("The Thief swiftly takes out " + MidLevelMonster.get() + "! +250 points!");
                         tScore += 250;
                         break;
                     case 18:
+                        System.out.println("The Thief tricks " + MidLevelMonster.get() + " into tripping " + Traps.get() + "! +315 points!");
                         tScore += 315;
                         break;
                     case 19:
+                        System.out.println("The Thief loots " + LowLevelTreasure.get() + ", " + MidLevelTreasure.get() + ", and " + HighLevelTreasure.get() + " from " + HighLevelMonster.get() + "! +400 points!");
                         tScore += 400;
                         break;
                     case 20:
+                        System.out.println("The Thief uncovers a hidden, priceless relic in the arena! +600 points!");
                         tScore += 600;
                         break;
                 }
@@ -87,15 +101,17 @@ public class Thief extends Thread {
                 System.out.println("The Thief's score: " + tScore);
                 if (tScore >= 1000) {
                     if (!GameState.gameOver) {
-                        System.out.println("The Thief has secured his plunder!");
+                        System.out.println("The Thief has secured her victory!");
+                        System.out.println("Thief Final Score: " + tScore);
                         GameState.gameOver = true;
                     }
                     break;
                 }
-                Thread.sleep(rng.nextInt(500, 750));
+                Thread.sleep(rng.nextInt(750, 1000));
             }
         } catch (InterruptedException e) {
-            System.out.println("Thief's quest has ended.");
+            System.out.println("The Thief concedes defeat.");
+            System.out.println("Thief Final Score: " + tScore);
         }
     }
 }

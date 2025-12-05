@@ -8,7 +8,7 @@ public class Traps {
         "a snaring vine trap",
         "a fire trap",
         "a spike pit trap",
-        "a switch, summoning " + LowLevelMonster.get(),
+        "an alarm that summons " + LowLevelMonster.get(),
         "a dart trap",
         "a trap with a magical rune that casts " + LowLevelSpell.get(),
         "a trap with a swarm of insects",
