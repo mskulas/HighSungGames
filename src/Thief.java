@@ -19,17 +19,17 @@ public class Thief extends Thread {
 
                 switch (roll) {
                     case 1:
-                        System.out.println("The Thief is ambushed by " + LowLevelMonster.get() + "! -140 points!");
+                        System.out.println("The Thief is ambushed by " + FlavorText.get(FlavorText.lMonsters) + "! -140 points!");
                         tScore -= 140;
                         if (tScore < 0) tScore = 0;
                         break;
                     case 2:
-                        System.out.println("The Thief trips " + Traps.get() + "! -100 points!");
+                        System.out.println("The Thief trips " + FlavorText.get(FlavorText.traps) + "! -100 points!");
                         tScore -= 100;
                         if (tScore < 0) tScore = 0;
                         break;
                     case 3:
-                        System.out.println("The Thief is spotted by " + MidLevelMonster.get() + "! -50 points!");
+                        System.out.println("The Thief is spotted by " + FlavorText.get(FlavorText.mMonsters) + "! -50 points!");
                         tScore -= 50;
                         if (tScore < 0) tScore = 0;
                         break;
@@ -61,35 +61,35 @@ public class Thief extends Thread {
                         tScore += 10;
                         break;
                     case 12:
-                        System.out.println("The Thief avoids " + Traps.get() + "! +25 points!");
+                        System.out.println("The Thief avoids " + FlavorText.get(FlavorText.traps) + "! +25 points!");
                         tScore += 25;
                         break;
                     case 13:
-                        System.out.println("The Thief disarms " + Traps.get() + "! +40 points!");
+                        System.out.println("The Thief disarms " + FlavorText.get(FlavorText.traps) + "! +40 points!");
                         tScore += 40;
                         break;
                     case 14:
-                        System.out.println("The Thief finds " + LowLevelTreasure.get() + "! +85 points!");
+                        System.out.println("The Thief finds " + FlavorText.get(FlavorText.lTreasure) + "! +85 points!");
                         tScore += 85;
                         break;
                     case 15:
-                        System.out.println("The Thief backstabs " + LowLevelMonster.get() + "! +125 points!");
+                        System.out.println("The Thief backstabs " + FlavorText.get(FlavorText.lMonsters) + "! +125 points!");
                         tScore += 125;
                         break;
                     case 16:
-                        System.out.println("The Thief uncovers " + MidLevelTreasure.get() + "! +200 points!");
+                        System.out.println("The Thief uncovers " + FlavorText.get(FlavorText.mTreasure) + "! +200 points!");
                         tScore += 200;
                         break;
                     case 17:
-                        System.out.println("The Thief swiftly takes out " + MidLevelMonster.get() + "! +250 points!");
+                        System.out.println("The Thief swiftly takes out " + FlavorText.get(FlavorText.mMonsters) + "! +250 points!");
                         tScore += 250;
                         break;
                     case 18:
-                        System.out.println("The Thief tricks " + MidLevelMonster.get() + " into tripping " + Traps.get() + "! +315 points!");
+                        System.out.println("The Thief tricks " + FlavorText.get(FlavorText.mMonsters) + " into tripping " + FlavorText.get(FlavorText.traps) + "! +315 points!");
                         tScore += 315;
                         break;
                     case 19:
-                        System.out.println("The Thief loots " + LowLevelTreasure.get() + ", " + MidLevelTreasure.get() + ", and " + HighLevelTreasure.get() + " from " + HighLevelMonster.get() + "! +400 points!");
+                        System.out.println("The Thief loots " + FlavorText.get(FlavorText.lTreasure) + ", " + FlavorText.get(FlavorText.mTreasure) + ", and " + FlavorText.get(FlavorText.hTreasure) + " from " + FlavorText.get(FlavorText.hMonsters) + "! +400 points!");
                         tScore += 400;
                         break;
                     case 20:

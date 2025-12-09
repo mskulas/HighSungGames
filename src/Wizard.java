@@ -24,22 +24,22 @@ public class Wizard extends Thread {
                         if (wScore < 0) wScore = 0;
                         break;
                     case 2:
-                        System.out.println("The Wizard is overwhelmed by " + HighLevelMonster.get() + "! -200 points!");
+                        System.out.println("The Wizard is overwhelmed by " + FlavorText.get(FlavorText.hMonsters) + "! -200 points!");
                         wScore -= 200;
                         if (wScore < 0) wScore = 0;
                         break;
                     case 3:
-                        System.out.println("The Wizard is caught off guard by " + MidLevelMonster.get() + "! -125 points!");
+                        System.out.println("The Wizard is caught off guard by " + FlavorText.get(FlavorText.mMonsters) + "! -125 points!");
                         wScore -= 125;
                         if (wScore < 0) wScore = 0;
                         break;
                     case 4:
-                        System.out.println("The Wizard stumbles into " + Traps.get() + "! -100 points!");
+                        System.out.println("The Wizard stumbles into " + FlavorText.get(FlavorText.traps) + "! -100 points!");
                         wScore -= 100;
                         if (wScore < 0) wScore = 0;
                         break;
                     case 5:
-                        System.out.println("The Wizard is tries to blast " + LowLevelMonster.get() + ", but the spell fizzles! -45 points!");
+                        System.out.println("The Wizard is tries to blast " + FlavorText.get(FlavorText.lMonsters) + ", but the spell fizzles! -45 points!");
                         wScore -= 45;
                         if (wScore < 0) wScore = 0;
                         break;
@@ -63,39 +63,39 @@ public class Wizard extends Thread {
                         wScore += 25;
                         break;
                     case 11:
-                        System.out.println("The Wizard blows back " + MidLevelMonster.get() + "! +45 points!");
+                        System.out.println("The Wizard blows back " + FlavorText.get(FlavorText.mMonsters) + "! +45 points!");
                         wScore += 45;
                         break;
                     case 12:
-                        System.out.println("The Wizard magically disarms " + Traps.get() + " successfully! +70 points!");
+                        System.out.println("The Wizard magically disarms " + FlavorText.get(FlavorText.traps) + " successfully! +70 points!");
                         wScore += 85;
                         break;
                     case 13:
-                        System.out.println("The Wizard casts " + LowLevelSpell.get() + " on " + LowLevelMonster.get() + "! +100 points!");
+                        System.out.println("The Wizard casts " + FlavorText.get(FlavorText.lSpells) + " on " + FlavorText.get(FlavorText.lMonsters) + "! +100 points!");
                         wScore += 100;
                         break;
                     case 14:
-                        System.out.println("The Wizard Casts " + MidLevelSpell.get() + " on " + LowLevelMonster.get() + "! +120 points!");
+                        System.out.println("The Wizard Casts " + FlavorText.get(FlavorText.mSpells) + " on " + FlavorText.get(FlavorText.lMonsters) + "! +120 points!");
                         wScore += 120;
                         break;
                     case 15:
-                        System.out.println("The Wizard banishes " + MidLevelMonster.get() + "! +185 points!");
+                        System.out.println("The Wizard banishes " + FlavorText.get(FlavorText.mMonsters) + "! +185 points!");
                         wScore += 185;
                         break;
                     case 16:
-                        System.out.println("The Wizard casts " + MidLevelSpell.get() + " on " + MidLevelMonster.get() + "! +230 points!");
+                        System.out.println("The Wizard casts " + FlavorText.get(FlavorText.mSpells) + " on " + FlavorText.get(FlavorText.mMonsters) + "! +230 points!");
                         wScore += 230;
                         break;
                     case 17:
-                        System.out.println("The Wizard casts " + MidLevelSpell.get() + " on " + HighLevelMonster.get() + "! +230 points!");
+                        System.out.println("The Wizard casts " + FlavorText.get(FlavorText.mSpells) + " on " + FlavorText.get(FlavorText.hMonsters) + "! +230 points!");
                         wScore += 300;
                         break;
                     case 18:
-                        System.out.println("The Wizard casts " + HighLevelSpell.get() + "! +375 points!");
+                        System.out.println("The Wizard casts " + FlavorText.get(FlavorText.hSpells) + "! +375 points!");
                         wScore += 375;
                         break;
                     case 19:
-                        System.out.println("The Wizard obliterates a hoarde of monsters with " + MidLevelSpell.get() + "! +375 points!");
+                        System.out.println("The Wizard obliterates a hoarde of monsters with " + FlavorText.get(FlavorText.mSpells) + "! +375 points!");
                         wScore += 500;
                         break;
                     case 20:

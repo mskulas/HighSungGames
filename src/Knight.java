@@ -19,22 +19,22 @@ public class Knight extends Thread {
 
                 switch (roll) {
                     case 1:
-                        System.out.println("The Knight runs and cowers from " + LowLevelMonster.get() + "! -200 points!");
+                        System.out.println("The Knight runs and cowers from " + FlavorText.get(FlavorText.lMonsters) + "! -200 points!");
                         kScore -= 200;
                         if (kScore < 0) kScore = 0;
                         break;
                     case 2:
-                        System.out.println("The Knight retreats from " + MidLevelMonster.get() + "! -125 points!");
+                        System.out.println("The Knight retreats from " + FlavorText.get(FlavorText.mMonsters) + "! -125 points!");
                         kScore -= 125;
                         if (kScore < 0) kScore = 0;
                         break;
                     case 3:
-                        System.out.println("The Knight stumbles into " + Traps.get() + "! -85 points!");
+                        System.out.println("The Knight stumbles into " + FlavorText.get(FlavorText.traps) + "! -85 points!");
                         kScore -= 85;
                         if (kScore < 0) kScore = 0;
                         break;
                     case 4:
-                        System.out.println("The Knight is ambushed by " + MidLevelMonster.get() + " and " + LowLevelMonster.get() + "! -60 points!");
+                        System.out.println("The Knight is ambushed by " + FlavorText.get(FlavorText.mMonsters) + " and " + FlavorText.get(FlavorText.lMonsters) + "! -60 points!");
                         kScore -= 60;
                         if (kScore < 0) kScore = 0;
                         break;
@@ -60,31 +60,31 @@ public class Knight extends Thread {
                         kScore += 10;
                         break;
                     case 11:
-                        System.out.println("The Knight lands a solid strike on " + HighLevelMonster.get() + "! +15 points!");
+                        System.out.println("The Knight lands a solid strike on " + FlavorText.get(FlavorText.hMonsters) + "! +15 points!");
                         kScore += 15;
                         break;
                     case 12:
-                        System.out.println("The Knight resists a " + MidLevelSpell.get() + " spell! +50 points!");
+                        System.out.println("The Knight resists a " + FlavorText.get(FlavorText.mSpells) + " spell! +50 points!");
                         kScore += 50;
                         break;
                     case 13:
-                        System.out.println("The Knight defeats " + LowLevelMonster.get() + "! +75 points!");
+                        System.out.println("The Knight defeats " + FlavorText.get(FlavorText.lMonsters) + "! +75 points!");
                         kScore += 75;
                         break;
                     case 14:
-                        System.out.println("The Knight stylishly slays " + LowLevelMonster.get() + "! +100 points!");
+                        System.out.println("The Knight stylishly slays " + FlavorText.get(FlavorText.lMonsters) + "! +100 points!");
                         kScore += 100;
                         break;
                     case 15:
-                        System.out.println("The Knight slays " + MidLevelMonster.get() + "! +150 points!");
+                        System.out.println("The Knight slays " + FlavorText.get(FlavorText.mMonsters) + "! +150 points!");
                         kScore += 150;
                         break;
                     case 16:
-                        System.out.println("The Knight crushes " + MidLevelMonster.get() + " and " + LowLevelMonster.get() + "! +215 points!");
+                        System.out.println("The Knight crushes " + FlavorText.get(FlavorText.mMonsters) + " and " + FlavorText.get(FlavorText.lMonsters) + "! +215 points!");
                         kScore += 215;
                         break;
                     case 17:
-                        System.out.println("The Knight vanquishes " + HighLevelMonster.get() + "! +275 points!");
+                        System.out.println("The Knight vanquishes " + FlavorText.get(FlavorText.hMonsters) + "! +275 points!");
                         kScore += 275;
                         break;
                     case 18:
@@ -92,11 +92,11 @@ public class Knight extends Thread {
                         kScore += 325;
                         break;
                     case 19:
-                        System.out.println("The Knight vanquishes " + MidLevelMonster.get() + " and " + HighLevelMonster.get() + " At once! +450 points!");
+                        System.out.println("The Knight vanquishes " + FlavorText.get(FlavorText.mMonsters) + " and " + FlavorText.get(FlavorText.hMonsters) + " At once! +450 points!");
                         kScore += 450;
                         break;
                     case 20:
-                        System.out.println("The Knight slays " + HighLevelMonster.get() + " in one hit! A legendary feat of valor! +800 points!");
+                        System.out.println("The Knight slays " + FlavorText.get(FlavorText.hMonsters) + " in one hit! A legendary feat of valor! +800 points!");
                         kScore += 800;
                         break;
                 }
